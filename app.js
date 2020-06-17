@@ -87,38 +87,45 @@
 
 // TASK#13
 
-var loginPassword = prompt("please enter your password");
-for (var i = 0; i < loginPassword.length; i++) {
-  if (
-    loginPassword[i] === String.fromCharCode(48) ||
-    loginPassword[i] === String.fromCharCode(49) ||
-    loginPassword[i] === String.fromCharCode(50) ||
-    loginPassword[i] === String.fromCharCode(51) ||
-    loginPassword[i] === String.fromCharCode(52) ||
-    loginPassword[i] === String.fromCharCode(53) ||
-    loginPassword[i] === String.fromCharCode(54) ||
-    loginPassword[i] === String.fromCharCode(55) ||
-    loginPassword[i] === String.fromCharCode(56) ||
-    loginPassword[i] === String.fromCharCode(57)
-  ) {
-    if (
-      loginPassword[i].slice(i) === String.fromCharCode(48) ||
-      loginPassword[i].slice(i) === String.fromCharCode(49) ||
-      loginPassword[i].slice(i) === String.fromCharCode(50) ||
-      loginPassword[i].slice(i) === String.fromCharCode(52) ||
-      loginPassword[i].slice(i) === String.fromCharCode(53) ||
-      loginPassword[i].slice(i) === String.fromCharCode(54) ||
-      loginPassword[i].slice(i) === String.fromCharCode(55) ||
-      loginPassword[i].slice(i) === String.fromCharCode(56) ||
-      loginPassword[i].slice(i) === String.fromCharCode(57)
-    ) {
-      alert("password cannot begin with a number");
-      break;
-    } else if (i === loginPassword.length - 1) {
-      alert("Welcome");
-    }
-  } else if (i === loginPassword.length - 1) {
-    alert("Your password must contain numbers");
-    break;
-  }
+// var loginPassword = prompt("please enter your password");
+// for (var i = 0; i < loginPassword.length; i++) {
+//   if (
+//     loginPassword[i] === String.fromCharCode(48) ||
+//     loginPassword[i] === String.fromCharCode(49) ||
+//     loginPassword[i] === String.fromCharCode(50) ||
+//     loginPassword[i] === String.fromCharCode(51) ||
+//     loginPassword[i] === String.fromCharCode(52) ||
+//     loginPassword[i] === String.fromCharCode(53) ||
+//     loginPassword[i] === String.fromCharCode(54) ||
+//     loginPassword[i] === String.fromCharCode(55) ||
+//     loginPassword[i] === String.fromCharCode(56) ||
+//     loginPassword[i] === String.fromCharCode(57)
+//   ) {
+//     if (
+//       loginPassword[i].slice(i) === String.fromCharCode(48) ||
+//       loginPassword[i].slice(i) === String.fromCharCode(49) ||
+//       loginPassword[i].slice(i) === String.fromCharCode(50) ||
+//       loginPassword[i].slice(i) === String.fromCharCode(52) ||
+//       loginPassword[i].slice(i) === String.fromCharCode(53) ||
+//       loginPassword[i].slice(i) === String.fromCharCode(54) ||
+//       loginPassword[i].slice(i) === String.fromCharCode(55) ||
+//       loginPassword[i].slice(i) === String.fromCharCode(56) ||
+//       loginPassword[i].slice(i) === String.fromCharCode(57)
+//     ) {
+//       alert("password cannot begin with a number");
+//       break;
+//     } else if (i === loginPassword.length - 1) {
+//       alert("Welcome");
+//     }
+//   } else if (i === loginPassword.length - 1) {
+//     alert("Your password must contain numbers");
+//     break;
+//   }
+// }
+
+// TASK#14
+
+var university = "University of karachi";
+for (var i = 0; i < university.length; i++) {
+  document.write(university[i] + "<br/>");
 }
