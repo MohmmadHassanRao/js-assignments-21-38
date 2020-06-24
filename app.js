@@ -191,3 +191,166 @@ if (Math.round(secretNum) === askSecret) {
 } else {
   alert("try again");
 }
+
+// CHAPTER 31-35 DATE METHODS
+// TASK#1
+alert(new Date());
+// TASK#2
+var date1 = new Date();
+var months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+var monthNow = months[date1.getMonth()];
+alert(monthNow);
+
+// TASK#3
+var date2 = new Date();
+var day = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+var dayNow = day[date2.getDay()];
+alert(dayNow);
+
+// TASK#3
+var date3 = new Date();
+var day1 = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+var dayNow = day[date2.getDay()];
+if (dayNow === "Saturday" || dayNow === "Sunday") {
+  alert("its funday");
+} else {
+  alert("Waiting for funday");
+}
+
+// TASK#4
+
+var fullDays = new Date();
+if (fullDays < fullDays.getDay()) {
+  alert("first fifteen days of the month");
+} else {
+  alert("last days of the month");
+}
+// // TASK#5
+
+var msec = Date.parse("June 23 2020");
+var todayMins = new Date();
+var firstMins = new Date("June 23, 2020");
+var mstodayMins = todayMins.getTime();
+var msfirstMins = firstMins.getTime();
+var totalMins = todayMins - firstMins;
+var finalMins = totalMins / 60;
+
+document.write(
+  "Current date: " +
+    new Date() +
+    "<br/>Elapsed miliseconds sice Jan 1 1970: " +
+    msec +
+    "<br/>Elapsed minutes sice Jan 1 1970: " +
+    Math.floor(finalMins)
+);
+
+// TASK#6
+
+var amOrpm = new Date().getHours();
+alert(amOrpm);
+if (amOrpm < 12) {
+  alert("its AM");
+} else {
+  alert("its PM");
+}
+
+// TASK#7
+var laterDate = new Date(new Date().getFullYear(), 11, 31);
+alert(laterDate);
+
+// TASK#8
+
+var firstRamadan = new Date("April 5 2020");
+var sinceRamadan = new Date();
+var firstRamadan1 = firstRamadan.getTime();
+var sinceRamadan1 = sinceRamadan.getTime();
+
+var totalRamadan = sinceRamadan1 - firstRamadan1;
+var finalResult = totalRamadan / (1000 * 60 * 60 * 24);
+
+document.write(
+  "<br/>" + Math.floor(finalResult) + " Days have passed since 1st ramadan 2020"
+);
+
+// CHAPTER 31-38
+// TASK#1
+
+function dateNow() {
+  alert(new Date());
+}
+dateNow();
+
+// TASK#2
+
+function yourName(firstN, LastN) {
+  alert(firstN + LastN);
+}
+yourName(prompt("Your FirstName?"), prompt("your lastName?"));
+
+// TASK#3
+function yourName(a, b) {
+  alert(a + b);
+}
+yourName(+prompt("Number 1"), +prompt("Number 2"));
+
+// TASK#4
+
+function calculator(num1, num2, operator) {
+  if (operator === "+") {
+    alert(num1 + num2);
+  } else if (operator === "*" || operator === "x") {
+    alert(num1 * num2);
+  } else if (operator === "-") {
+    alert(num1 - num2);
+  }
+}
+calculator(
+  +prompt("Enter number 1"),
+  +prompt("enter number 2"),
+  prompt("Enter operator like: + - *")
+);
+
+// TASK#5
+
+function sqArgument(arg) {
+  alert(arg * arg);
+}
+sqArgument(prompt("Enter your number to square it"));
+
+// TASK#6
+
+function Counting(count1, count2) {
+  for (var i = count1; i <= count2; i++) {
+    document.write(i + "<br/>");
+  }
+}
+Counting(prompt("num1"), prompt("num2"));
