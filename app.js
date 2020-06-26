@@ -383,15 +383,35 @@
 
 // calcHypoteneus();
 
-// TASK#9
-function areaRectangle(width, height = 4) {
-  var area = width * height;
-  return area;
-}
+// // TASK#9
+// function areaRectangle(width, height = 4) {
+//   var area = width * height;
+//   return area;
+// }
 
-alert(areaRectangle(prompt("Enter width"), prompt("enter height")));
+// alert(areaRectangle(prompt("Enter width"), prompt("enter height")));
 
-// TASK#10
+// // TASK#10
+// var isPalindrome = function (string) {
+//   if (string == string.split("").reverse().join("")) {
+//     alert(string + " is palindrome.");
+//   } else {
+//     alert(string + " is not palindrome.");
+//   }
+// };
 
-var hassan = "hassan";
-alert(hassan.reverse());
+// isPalindrome(prompt("Check palindrome"));
+
+// TASK#11
+
+var capitalizeFirstLetter = (uppCase) => {
+  return uppCase
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
+var Capitalize = capitalizeFirstLetter(
+  prompt("enter a senctence to capitalize first word")
+);
+alert(Capitalize);
