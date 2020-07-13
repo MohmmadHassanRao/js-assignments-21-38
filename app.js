@@ -404,14 +404,29 @@
 
 // TASK#11
 
-var capitalizeFirstLetter = (uppCase) => {
-  return uppCase
-    .toLowerCase()
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-};
-var Capitalize = capitalizeFirstLetter(
-  prompt("enter a senctence to capitalize first word")
-);
-alert(Capitalize);
+// var capitalizeFirstLetter = (uppCase) => {
+//   return uppCase
+//     .toLowerCase()
+//     .split(" ")
+//     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+//     .join(" ");
+// };
+// var Capitalize = capitalizeFirstLetter(
+//   prompt("enter a senctence to capitalize first word")
+// );
+// alert(Capitalize);
+
+// TASK#12
+
+function longestWordInString(str) {
+  var splitString = str.split(" ");
+
+  for (var i = 0; i < splitString.length; i++) {
+    if (splitString[i].length > i) {
+      longestWord = splitString[i];
+    }
+  }
+  return longestWord;
+}
+
+alert(longestWordInString(prompt("Enter a sentence to find the longest word")));
